@@ -2,12 +2,20 @@ import { Component } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { GoogleLogin } from '@react-oauth/google';
 
-import AddTutorial from "./components/add-tutorial.component";
-import Tutorial from "./components/tutorial.component";
-import TutorialsList from "./components/tutorials-list.component";
+import AddTutorial from "./components/add-tutorial-component";
+import Tutorial from "./components/tutorial-component";
+import TutorialsList from "./components/tutorials-list-component";
 
 class App extends Component {
+  responseMessage = (response: any) => {
+    console.log(response);
+  };
+  errorMessage = () => {
+      console.error("unable to login");
+  };
+
   render() {
     return (
       <div>
@@ -26,8 +34,20 @@ class App extends Component {
                 Add
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to={"/signin"} className="nav-link">
+                Sign-In
+              </Link>
+            </li>
           </div>
         </nav>
+
+        <div>
+            <h2>React Google Login</h2>
+            <br />
+            <br />
+            <GoogleLogin onSuccess={this.responseMessage} onError={this.errorMessage} />
+        </div>
 
         <div className="container mt-3">
           <Switch>

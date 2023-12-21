@@ -1,7 +1,7 @@
 import { Component, ChangeEvent } from "react";
-import TutorialDataService from "../services/tutorial.service";
+import TutorialDataService from "../services/tutorial-service";
 import { Link } from "react-router-dom";
-import ITutorialData from '../types/tutorial.type';
+import ITutorialData from '../types/tutorial-type';
 
 type Props = {};
 
@@ -125,7 +125,7 @@ export default class TutorialsList extends Component<Props, State>{
           </div>
         </div>
         <div className="col-md-6">
-          <h4>Tutorials List</h4>
+          <h4>Tutorials List Modified</h4>
 
           <ul className="list-group">
             {tutorials &&

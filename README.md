@@ -63,6 +63,7 @@ Integration (run back-end & front-end on same server/port)
 
 > [Integrate React with Node.js Express on same Server/Port](https://bezkoder.com/integrate-react-express-same-server-port/)
 
+> https://blog.logrocket.com/guide-adding-google-login-react-app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
